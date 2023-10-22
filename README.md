@@ -8,5 +8,14 @@ login form
 Sign up form
 form validation
 useRef hook
+Firebase setup
+deploying our app to production
+Implement sign up/sign in user account
+Created redux store withs user slice
+Implemented signout
+update profile api call
 
-npm install -g firebase-tools
+fetch movie from TMDB
+
+
+

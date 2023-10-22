@@ -7,9 +7,7 @@ export const checkValidation = (email, password, name) => {
     /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/.test(
       password
     );
-  const validateName = /^[\\p{L} .'-]+$/.test(name);
 
   if (!validatEmail) return "Email is not valid";
   if (!validatePassword) return "Password is not valid";
-  if (!validateName) return "Enter valid name";
 };
