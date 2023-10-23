@@ -8,12 +8,11 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/redux/userSlice";
+import { BG_IMAGE, AVATAR_IMG } from "../utils/constant";
 
 const Login = () => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [isSignIn, setIsSignIn] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
@@ -45,7 +44,7 @@ const Login = () => {
           const user = userCredential.user;
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL: "https://avatars.githubusercontent.com/u/144803737?v=4",
+            photoURL: AVATAR_IMG,
           })
             .then(() => {
               // Profile updated!
@@ -58,7 +57,6 @@ const Login = () => {
                   photoURL: photoURL,
                 })
               );
-              navigate("/browse");
             })
             .catch((error) => {
               // An error occurred
@@ -80,7 +78,6 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -94,10 +91,7 @@ const Login = () => {
     <div>
       <Header />
       <div className="relative">
-        <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/ab180a27-b661-44d7-a6d9-940cb32f2f4a/7fb62e44-31fd-4e1f-b6ad-0b5c8c2a20ef/IN-en-20231009-popsignuptwoweeks-perspective_alpha_website_large.jpg"
-          alt="image"
-        />
+        <img src={BG_IMAGE} alt="image" />
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
