@@ -25,6 +25,9 @@ created a custom hooks to use api
 update store trailer with video data
 embed the youtube video and make it autoplay and mute
 used tailwind to make main container.
+Built secondaty container where we can browse popuper/upcoming and other types of movies.
+built GPT Search page skeloton
+** Search page is multilingual
 
 
 fetch movie from TMDB
