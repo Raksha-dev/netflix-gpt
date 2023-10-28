@@ -145,7 +145,6 @@ const Login = () => {
           <button>Learn more.</button>
         </p>
       </form>
-      <Footer />
     </div>
   );
 };
