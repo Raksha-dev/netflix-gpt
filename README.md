@@ -28,9 +28,12 @@ used tailwind to make main container.
 Built secondaty container where we can browse popuper/upcoming and other types of movies.
 built GPT Search page skeloton
 ** Search page is multilingual
-
-
-fetch movie from TMDB
+get Open ai key 
+get search tmdb key
+reused movie list to show searched movies
+Memoization to stop making api calls again n again
+added .env file for security issues
+added .env file to add git ignore
 
 
 
